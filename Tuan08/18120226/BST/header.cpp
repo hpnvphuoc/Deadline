@@ -169,9 +169,9 @@ void Remove(NODE*& p_root, int x) {
 				return;
 			}
 			else {
-				NODE* p = p_root;
-				while (p->p_right != nullptr) {
-					p = p->p_right;
+				NODE* p = p_root->p_right;
+				while (p->p_left != nullptr) {
+					p = p->p_left;
 				};
 				p_root->key = p->key;
 				Remove(p_root->p_right, p->key);
